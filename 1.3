@@ -1,17 +1,9 @@
-class FigureColor:
+class Square(Rectangle):
 
-    def __int__(self,r=255,g=0,b=0):
-        self.__r = r
-        self.__g = g
-        self.__b = b
-
-    def get_color(self):
-        return (self.__r,self.__g,self.__b)
-
-    def set_color(self, r, g, b,):
-        self.__r = r
-        self.__g = g
-        self.__b = b
+    def __init__(self,side = 6,color=FigureColor()):
+        super().__init__(side,side,color)
 
     def __repr__(self):
-        return f"r:{self.__r}, g:{self.__g}, b:{self.__b}"
+        ar1 = super().get_area()
+        co1 = super().get_color()
+        return f"Квадрат площадью {ar1, цвет: {str(co1)}}"
